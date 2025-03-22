@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Manager</h1>
+        
+        <div id="auth" class="auth-section">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="finance-section" class="finance-section" style="display: none;">
+            <h2>Manage Finances</h2>
+            <button onclick="showIncomeForm()" class="income-btn">Add Income</button>
+            <button onclick="showExpenseForm()" class="expense-btn">Add Expense</button>
+            <button onclick="generateReport()" class="report-btn">Generate Report</button>
+        </div>
+
+        <div id="form-section" class="form-section" style="display: none;">
+            <h2 id="form-title"></h2>
+            <input type="text" id="category" placeholder="Category">
+            <input type="number" id="amount" placeholder="Amount">
+            <input type="date" id="date">
+            <button onclick="submitFinance()" class="submit-btn">Submit</button>
+        </div>
+
+        <div id="report-section" class="report-section" style="display: none;">
+            <h2>Financial Report</h2>
+            <div id="report-content"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
